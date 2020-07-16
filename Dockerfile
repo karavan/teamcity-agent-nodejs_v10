@@ -4,6 +4,7 @@
 
 FROM jetbrains/teamcity-agent:latest
 
+USER root
 ARG BUILD_DATE
 ARG VCS_REF
 
@@ -21,3 +22,4 @@ RUN apt-get update && \
 	npm i -g npm@6.13.4 less@3.10.3 less-plugin-autoprefix@2.0.0 less-plugin-clean-css@1.5.1
 
 COPY docker_opts.sh /services/docker_opts.sh
+USER buildagent
