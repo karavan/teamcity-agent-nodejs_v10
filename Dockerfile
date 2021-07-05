@@ -18,6 +18,7 @@ RUN apt-get update && \
 	apt-get install -y build-essential sudo wget && \
 	curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
 	apt-get install -y nodejs && \
+	apt-get install -y postgresql-client && \
 	apt-get clean all && \
 	npm i -g npm@6.13.4 less@3.10.3 less-plugin-autoprefix@2.0.0 less-plugin-clean-css@1.5.1
 
