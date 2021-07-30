@@ -2,7 +2,7 @@
 # Based on the official TeamCity Agent image with Nodejs added on top. #
 ########################################################################
 
-FROM jetbrains/teamcity-agent:latest
+FROM debian:stable-20210721
 
 USER root
 ARG BUILD_DATE
