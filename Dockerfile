@@ -15,7 +15,9 @@ LABEL org.label-schema.vcs-url="https://github.com/karavan/teamcity-agent-nodejs
 LABEL org.label-schema.vcs-ref=$VCS_REF
 
 RUN apt-get update && \
-	apt-get install -y build-essential sudo wget apt-utils && \
+        apt-get install -y apt-utils
+RUN sleep 300
+RUN apt-get install -y build-essential sudo wget && \
 	curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
 	apt-get install -y nodejs && \
 	apt-get install -y postgresql-client && \
