@@ -22,4 +22,3 @@ RUN apt-get update && \
 	apt-get clean all
 
 COPY docker_opts.sh /services/docker_opts.sh
-USER buildagent
